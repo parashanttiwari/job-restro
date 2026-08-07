@@ -1,0 +1,271 @@
+export const translations = {
+  en: {
+    app: {
+      title: 'Restaurant Recruitment',
+      tagline: 'Find your next role in hospitality',
+    },
+    header: {
+      login: 'Log In',
+      logout: 'Log out',
+      greeting: 'Hi, {name}',
+    },
+    stats: {
+      line: '{openCount} open roles across {restaurantCount} restaurants',
+    },
+    jobList: {
+      heading: 'Open Positions',
+      count: '{n} jobs',
+      searchPlaceholder: 'Search jobs, restaurants, cities…',
+      noResults: 'No jobs match your search.',
+    },
+    jobCard: {
+      apply: 'Apply Now',
+      closed: 'Closed',
+      perMonth: '/month',
+    },
+    form: {
+      emptyState: 'Select a job from the list to start your application.',
+      headingApplyFor: 'Apply for {job}',
+      loggedInAs: 'Logged in as {mobile}.',
+      closedNotice: 'This position is currently closed for applications.',
+      draftRestored: 'Draft restored (saved {time}).',
+      draftSaved: 'Draft saved.',
+      draftFileNote: 'Previously attached "{file}" — please re-attach it before applying.',
+      sections: {
+        basic: 'Basic Details',
+        professional: 'Professional Background',
+        account: 'Resume & Account',
+        optional: 'Additional Details',
+      },
+    },
+    field: {
+      fullName: 'Full Name',
+      mobileNumber: 'Mobile Number',
+      currentLocation: 'Current Location',
+      preferredRole: 'Preferred Job Role',
+      highestEducation: 'Highest Education',
+      totalExperience: 'Total Experience',
+      availability: 'Availability to Join',
+      password: 'Password',
+      passwordHint: 'Used to log in later and update your profile.',
+      resume: 'Resume Upload',
+      email: 'Email Address',
+      age: 'Age',
+      gender: 'Gender',
+      preferredWorkLocation: 'Preferred Work Location',
+      currentEmployer: 'Current Employer',
+      currentSalary: 'Current Salary',
+      expectedSalary: 'Expected Salary',
+      noticePeriod: 'Notice Period',
+      skills: 'Skills',
+      languagesKnown: 'Languages Known',
+      profilePhoto: 'Profile Photo',
+      comments: 'Additional Comments',
+    },
+    placeholder: {
+      select: 'Select',
+      commaSeparated: 'Comma-separated',
+      currentSalary: 'e.g. ₹20,000/month',
+      expectedSalary: 'e.g. ₹25,000/month',
+    },
+    upload: {
+      cta: 'Click to upload or drag and drop',
+      hint: 'PDF or DOC, up to 5MB',
+      replace: 'Replace file',
+      uploading: 'Uploading {file}… {pct}%',
+      done: 'Uploaded {file}',
+      photoChosen: 'Selected: {file}',
+    },
+    actions: {
+      applyNow: 'Apply Now',
+      saveDraft: 'Save Draft',
+      resetForm: 'Reset Form',
+      backToForm: 'Back to Form',
+    },
+    success: {
+      title: 'Application submitted!',
+      message:
+        'Thanks, {name}. Your application for {job} at {restaurant} has been received. You can log in anytime with your mobile number and password to update your profile or apply to more jobs without filling this form again.',
+    },
+    login: {
+      title: 'Log In',
+      subtitle: 'Log in to reuse your profile and apply to more jobs without filling the form again.',
+      mobile: 'Mobile Number',
+      password: 'Password',
+      submit: 'Log In',
+      cancel: 'Cancel',
+      error: 'No matching account. Check your mobile number and password.',
+    },
+    validation: {
+      required: '{label} is required.',
+      passwordMin: 'Password must be at least 6 characters.',
+      resumeRequired: 'Please upload your resume.',
+      mobileInvalid: 'Enter a valid 10-digit mobile number.',
+      emailInvalid: 'Enter a valid email address.',
+      fileTooLarge: 'File is too large. Max size is 5MB.',
+    },
+    employmentType: {
+      'Full-time': 'Full-time',
+      'Part-time': 'Part-time',
+    },
+    status: {
+      Open: 'Open',
+      Closed: 'Closed',
+    },
+  },
+  hi: {
+    app: {
+      title: 'रेस्टोरेंट भर्ती',
+      tagline: 'हॉस्पिटैलिटी में अपनी अगली नौकरी पाएं',
+    },
+    header: {
+      login: 'लॉग इन',
+      logout: 'लॉग आउट',
+      greeting: 'नमस्ते, {name}',
+    },
+    stats: {
+      line: '{restaurantCount} रेस्टोरेंट में {openCount} खुले पद',
+    },
+    jobList: {
+      heading: 'उपलब्ध पद',
+      count: '{n} नौकरियां',
+      searchPlaceholder: 'नौकरी, रेस्टोरेंट, शहर खोजें…',
+      noResults: 'आपकी खोज से मेल खाने वाली कोई नौकरी नहीं मिली।',
+    },
+    jobCard: {
+      apply: 'आवेदन करें',
+      closed: 'बंद',
+      perMonth: '/माह',
+    },
+    form: {
+      emptyState: 'आवेदन शुरू करने के लिए सूची से एक नौकरी चुनें।',
+      headingApplyFor: '{job} के लिए आवेदन करें',
+      loggedInAs: '{mobile} के रूप में लॉग इन है।',
+      closedNotice: 'यह पद फ़िलहाल आवेदन के लिए बंद है।',
+      draftRestored: 'ड्राफ्ट पुनर्स्थापित किया गया (सहेजा गया {time})।',
+      draftSaved: 'ड्राफ्ट सहेजा गया।',
+      draftFileNote: '"{file}" पहले से जुड़ी थी — कृपया आवेदन करने से पहले इसे दोबारा जोड़ें।',
+      sections: {
+        basic: 'मूल जानकारी',
+        professional: 'व्यावसायिक पृष्ठभूमि',
+        account: 'रिज्यूमे और खाता',
+        optional: 'अतिरिक्त जानकारी',
+      },
+    },
+    field: {
+      fullName: 'पूरा नाम',
+      mobileNumber: 'मोबाइल नंबर',
+      currentLocation: 'वर्तमान स्थान',
+      preferredRole: 'पसंदीदा नौकरी भूमिका',
+      highestEducation: 'उच्चतम शिक्षा',
+      totalExperience: 'कुल अनुभव',
+      availability: 'जॉइनिंग की उपलब्धता',
+      password: 'पासवर्ड',
+      passwordHint: 'बाद में लॉग इन करने और प्रोफ़ाइल अपडेट करने के लिए उपयोग होगा।',
+      resume: 'रिज्यूमे अपलोड करें',
+      email: 'ईमेल पता',
+      age: 'उम्र',
+      gender: 'लिंग',
+      preferredWorkLocation: 'पसंदीदा कार्य स्थान',
+      currentEmployer: 'वर्तमान नियोक्ता',
+      currentSalary: 'वर्तमान वेतन',
+      expectedSalary: 'अपेक्षित वेतन',
+      noticePeriod: 'नोटिस अवधि',
+      skills: 'कौशल',
+      languagesKnown: 'ज्ञात भाषाएं',
+      profilePhoto: 'प्रोफ़ाइल फोटो',
+      comments: 'अतिरिक्त टिप्पणियां',
+    },
+    placeholder: {
+      select: 'चुनें',
+      commaSeparated: 'अल्पविराम से अलग करें',
+      currentSalary: 'उदा. ₹20,000/माह',
+      expectedSalary: 'उदा. ₹25,000/माह',
+    },
+    upload: {
+      cta: 'अपलोड करने के लिए क्लिक करें या फ़ाइल खींचें और छोड़ें',
+      hint: 'PDF या DOC, अधिकतम 5MB',
+      replace: 'फ़ाइल बदलें',
+      uploading: '{file} अपलोड हो रही है… {pct}%',
+      done: '{file} अपलोड हो गई',
+      photoChosen: 'चयनित: {file}',
+    },
+    actions: {
+      applyNow: 'अभी आवेदन करें',
+      saveDraft: 'ड्राफ्ट सहेजें',
+      resetForm: 'फ़ॉर्म रीसेट करें',
+      backToForm: 'फ़ॉर्म पर वापस जाएं',
+    },
+    success: {
+      title: 'आवेदन सफलतापूर्वक जमा हुआ!',
+      message:
+        'धन्यवाद, {name}। {restaurant} में {job} पद के लिए आपका आवेदन प्राप्त हो गया है। आप कभी भी अपने मोबाइल नंबर और पासवर्ड से लॉग इन करके प्रोफ़ाइल अपडेट कर सकते हैं या दोबारा फ़ॉर्म भरे बिना अन्य नौकरियों के लिए आवेदन कर सकते हैं।',
+    },
+    login: {
+      title: 'लॉग इन करें',
+      subtitle: 'प्रोफ़ाइल का पुनः उपयोग करने और बिना फ़ॉर्म दोबारा भरे आवेदन करने के लिए लॉग इन करें।',
+      mobile: 'मोबाइल नंबर',
+      password: 'पासवर्ड',
+      submit: 'लॉग इन करें',
+      cancel: 'रद्द करें',
+      error: 'कोई मिलान खाता नहीं मिला। मोबाइल नंबर और पासवर्ड जांचें।',
+    },
+    validation: {
+      required: '{label} आवश्यक है।',
+      passwordMin: 'पासवर्ड कम से कम 6 अक्षरों का होना चाहिए।',
+      resumeRequired: 'कृपया अपना रिज्यूमे अपलोड करें।',
+      mobileInvalid: 'मान्य 10 अंकों का मोबाइल नंबर दर्ज करें।',
+      emailInvalid: 'मान्य ईमेल पता दर्ज करें।',
+      fileTooLarge: 'फ़ाइल बहुत बड़ी है। अधिकतम आकार 5MB है।',
+    },
+    employmentType: {
+      'Full-time': 'फुल-टाइम',
+      'Part-time': 'पार्ट-टाइम',
+    },
+    status: {
+      Open: 'उपलब्ध',
+      Closed: 'बंद',
+    },
+  },
+};
+
+export const educationOptions = [
+  { value: 'Below 10th', en: 'Below 10th', hi: '10वीं से कम' },
+  { value: '10th Pass', en: '10th Pass', hi: '10वीं पास' },
+  { value: '12th Pass', en: '12th Pass', hi: '12वीं पास' },
+  { value: 'Diploma', en: 'Diploma', hi: 'डिप्लोमा' },
+  { value: 'Graduate', en: 'Graduate', hi: 'स्नातक' },
+  { value: 'Post Graduate', en: 'Post Graduate', hi: 'स्नातकोत्तर' },
+  { value: 'Other', en: 'Other', hi: 'अन्य' },
+];
+
+export const experienceOptions = [
+  { value: 'Fresher', en: 'Fresher', hi: 'फ्रेशर' },
+  { value: 'Less than 1 year', en: 'Less than 1 year', hi: '1 वर्ष से कम' },
+  { value: '1-2 years', en: '1-2 years', hi: '1-2 वर्ष' },
+  { value: '2-5 years', en: '2-5 years', hi: '2-5 वर्ष' },
+  { value: '5-10 years', en: '5-10 years', hi: '5-10 वर्ष' },
+  { value: '10+ years', en: '10+ years', hi: '10+ वर्ष' },
+];
+
+export const availabilityOptions = [
+  { value: 'Immediate', en: 'Immediate', hi: 'तुरंत' },
+  { value: 'Within 15 days', en: 'Within 15 days', hi: '15 दिनों के भीतर' },
+  { value: 'Within 30 days', en: 'Within 30 days', hi: '30 दिनों के भीतर' },
+  { value: 'More than 30 days', en: 'More than 30 days', hi: '30 दिनों से अधिक' },
+];
+
+export const genderOptions = [
+  { value: 'Male', en: 'Male', hi: 'पुरुष' },
+  { value: 'Female', en: 'Female', hi: 'महिला' },
+  { value: 'Other', en: 'Other', hi: 'अन्य' },
+  { value: 'Prefer not to say', en: 'Prefer not to say', hi: 'बताना नहीं चाहते' },
+];
+
+export const noticePeriodOptions = [
+  { value: 'Immediate', en: 'Immediate', hi: 'तुरंत' },
+  { value: '15 days', en: '15 days', hi: '15 दिन' },
+  { value: '30 days', en: '30 days', hi: '30 दिन' },
+  { value: '60 days', en: '60 days', hi: '60 दिन' },
+  { value: '90 days', en: '90 days', hi: '90 दिन' },
+];
