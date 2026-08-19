@@ -1,38 +1,60 @@
 :root {
-  /* Palette */
-  --color-bg: #faf8f5;
+  /* Brand palette */
+  --color-navy: #14213d;
+  --color-navy-light: #223259;
+  --color-orange: #fca311;
+  --color-orange-hover: #e0900a;
+  --color-teal: #2a9d8f;
+  --color-teal-hover: #218074;
+
+  /* Semantic palette */
+  --color-bg: #f8f9fa;
+  --color-bg-alt: #eef1f5;
   --color-surface: #ffffff;
-  --color-surface-alt: #f6f1ea;
-  --color-border: #e8e1d6;
-  --color-border-strong: #d8cebd;
-  --color-text: #241d15;
-  --color-text-muted: #6c6255;
-  --color-text-faint: #978c7c;
+  --color-surface-alt: #f1f3f6;
+  --color-border: #e3e7ed;
+  --color-border-strong: #cdd4de;
+  --color-text: #212529;
+  --color-text-muted: #5c6470;
+  --color-text-faint: #8a92a0;
 
-  --color-primary: #c1481f;
-  --color-primary-hover: #a53a17;
-  --color-primary-soft: #fbe8dd;
+  --color-primary: var(--color-orange);
+  --color-primary-hover: var(--color-orange-hover);
+  --color-primary-soft: #fef2dc;
   --color-primary-contrast: #ffffff;
+  --color-accent: var(--color-teal);
+  --color-accent-soft: #e2f4f2;
+  --color-gold: var(--color-orange);
+  --color-gold-soft: #fef2dc;
 
-  --color-ink: #1b2a22;
-  --color-success: #1e7a4c;
-  --color-success-soft: #e4f4ea;
-  --color-danger: #c72c2c;
-  --color-danger-soft: #fcebeb;
-  --color-neutral: #8a8271;
-  --color-neutral-soft: #f1ede4;
+  --color-ink: var(--color-navy);
+  --color-ink-soft: var(--color-navy-light);
+  --color-success: var(--color-teal);
+  --color-success-soft: #e2f4f2;
+  --color-danger: #d64545;
+  --color-danger-soft: #fbe8e8;
+  --color-neutral: #7c8695;
+  --color-neutral-soft: #eef1f5;
 
-  --shadow-xs: 0 1px 2px rgba(36, 29, 21, 0.05);
-  --shadow-sm: 0 2px 6px rgba(36, 29, 21, 0.06);
-  --shadow-md: 0 10px 24px rgba(36, 29, 21, 0.08);
-  --shadow-lg: 0 24px 48px rgba(36, 29, 21, 0.14);
+  --gradient-primary: linear-gradient(135deg, #ffb52e 0%, #fca311 55%, #e0900a 100%);
+  --gradient-dark: linear-gradient(160deg, #1c2c4f 0%, #14213d 55%, #0d1729 100%);
+  --gradient-teal: linear-gradient(135deg, #3fc1b0 0%, #2a9d8f 100%);
+  --gradient-gold: var(--gradient-primary);
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
+  --shadow-xs: 0 1px 2px rgba(20, 33, 61, 0.06);
+  --shadow-sm: 0 4px 14px rgba(20, 33, 61, 0.08);
+  --shadow-md: 0 14px 32px rgba(20, 33, 61, 0.1);
+  --shadow-lg: 0 28px 60px rgba(20, 33, 61, 0.18);
+  --shadow-glow: 0 18px 36px rgba(252, 163, 17, 0.32);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   --radius-pill: 999px;
 
   --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Poppins', 'Inter', system-ui, sans-serif;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -42,14 +64,22 @@
   --space-6: 24px;
   --space-8: 32px;
   --space-10: 40px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 :root[lang='hi'] {
   --font-sans: 'Noto Sans Devanagari', 'Inter', system-ui, sans-serif;
+  --font-display: 'Noto Sans Devanagari', 'Poppins', sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -65,10 +95,15 @@ h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700;
   letter-spacing: -0.01em;
+  font-family: var(--font-display);
 }
 
 p {
   margin: 0;
+}
+
+a {
+  color: inherit;
 }
 
 button {
@@ -88,4 +123,44 @@ input, select, textarea {
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(3deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(14px) translateX(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

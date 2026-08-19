@@ -1,22 +1,25 @@
 import { useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import JobCard from './JobCard.jsx';
 import Icon from './Icon.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function JobList({ jobs, selectedJobId, onSelect }) {
   const { t } = useLanguage();
-  const [query, setQuery] = useState('');
+  const [searchParams] = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get('q') || '');
 
   const filteredJobs = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return jobs;
+    const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (terms.length === 0) return jobs;
     return jobs.filter((job) => {
       const haystack = [
-        job.title, job.title_hi, job.restaurant, job.restaurant_hi, job.location, job.location_hi,
+        job.title, job.title_hi, job.restaurant, job.restaurant_hi,
+        job.location, job.location_hi, job.roleCategory, job.experience, job.experience_hi,
       ]
         .join(' ')
         .toLowerCase();
-      return haystack.includes(q);
+      return terms.every((term) => haystack.includes(term));
     });
   }, [jobs, query]);
 

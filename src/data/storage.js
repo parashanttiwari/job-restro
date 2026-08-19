@@ -1,6 +1,7 @@
 const ACCOUNTS_KEY = 'rr_accounts';
 const DRAFTS_KEY = 'rr_drafts';
 const APPLICATIONS_KEY = 'rr_applications';
+const MESSAGES_KEY = 'rr_messages';
 
 function readJSON(key, fallback) {
   try {
@@ -49,4 +50,10 @@ export function saveApplication(application) {
   const applications = readJSON(APPLICATIONS_KEY, []);
   applications.push({ ...application, submittedAt: new Date().toISOString() });
   writeJSON(APPLICATIONS_KEY, applications);
+}
+
+export function saveContactMessage(message) {
+  const messages = readJSON(MESSAGES_KEY, []);
+  messages.push({ ...message, submittedAt: new Date().toISOString() });
+  writeJSON(MESSAGES_KEY, messages);
 }
